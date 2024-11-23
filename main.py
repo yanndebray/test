@@ -26,6 +26,9 @@ def validate_api_key(request):
 def index():
   return "Hello, Weather!"
 
+@app.route('/key')
+def show_key():
+  return app_id
 
 @app.route('/weather', methods=['GET'])
 def get_weather_data():
